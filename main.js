@@ -19,6 +19,13 @@ function calcolaPrezzo() {
         sconto = prezzoBase * 0.2;
         console.log('sconto: ', sconto)
     }
+    
+    const prezzoTotale = prezzoBase - sconto;
+    console.log('prezzoTotale: ', prezzoTotale)
+    const prezzoFormattato = prezzoTotale.toFixed(2);
+    console.log('prezzoFormattato:', prezzoFormattato)
 
+    let currentElement = document.getElementById('prezzo');
+    currentElement.innerHTML = `Il prezzo del biglietto è: ${prezzoFormattato} €`;
 
 }
